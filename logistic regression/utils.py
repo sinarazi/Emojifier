@@ -5,31 +5,8 @@ from matplotlib import pyplot
 sys.path.append('..')
 
 
-
 def mapFeature(X1, X2, degree=6):
-    """
-    Maps the two input features to quadratic features used in the regularization exercise.
 
-    Returns a new feature array with more features, comprising of
-    X1, X2, X1.^2, X2.^2, X1*X2, X1*X2.^2, etc..
-
-    Parameters
-    ----------
-    X1 : array_like
-        A vector of shape (m, 1), containing one feature for all examples.
-
-    X2 : array_like
-        A vector of shape (m, 1), containing a second feature for all examples.
-        Inputs X1, X2 must be the same size.
-
-    degree: int, optional
-        The polynomial degree.
-
-    Returns
-    -------
-    : array_like
-        A matrix of of m rows, and columns depend on the degree of polynomial.
-    """
     if X1.ndim > 0:
         out = [np.ones(X1.shape[0])]
     else:
@@ -45,28 +22,7 @@ def mapFeature(X1, X2, degree=6):
         return np.array(out)
 
 
-
 def plotDecisionBoundary(plotData, theta, X, y):
-    """
-    Plots the data points X and y into a new figure with the decision boundary defined by theta.
-    Plots the data points with * for the positive examples and o for  the negative examples.
-
-    Parameters
-    ----------
-    plotData : func
-        A function reference for plotting the X, y data.
-
-    theta : array_like
-        Parameters for logistic regression. A vector of shape (n+1, ).
-
-    X : array_like
-        The input dataset. X is assumed to be  a either:
-            1) Mx3 matrix, where the first column is an all ones column for the intercept.
-            2) MxN, N>3 matrix, where the first column is all ones.
-
-    y : array_like
-        Vector of data labels of shape (m, ).
-    """
     # make sure theta is a numpy array
     theta = np.array(theta)
 
