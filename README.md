@@ -18,24 +18,10 @@ After using `sentence_to_avg()` you need to:
 * Compute the cost
 * Backpropagate to update the softmax parameters
 
-
-
 * The equations you need to implement in the forward pass and to compute the cross-entropy cost are below:
-* The variable $Y_{oh}$ ("Y one hot") is the one-hot encoding of the output labels. 
-
-$$ z^{(i)} = W . avg^{(i)} + b$$
-
-$$ a^{(i)} = softmax(z^{(i)})$$
-
-$$ \mathcal{L}^{(i)} = - \sum_{k = 0}^{n_y - 1} Y_{oh,k}^{(i)} * log(a^{(i)}_k)$$
-
+* The one-hot encoding of the output labels. 
 
 ### LSTM based
-* You feed the embedding layer's output to an LSTM network. 
-
-<img src="images/emojifier-v2.png" style="width:700px;height:400px;"> <br>
-<caption><center> **Figure 3**: Emojifier-v2. A 2-layer LSTM sequence classifier. </center></caption>
-
 * You may need to use the following Keras layers:
     * [Input()](https://keras.io/layers/core/#input)
         * Set the `shape` and `dtype` parameters.
