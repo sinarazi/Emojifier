@@ -1,4 +1,5 @@
 # Emojifier
+It is a nlp-based project so as to give you emoji that corresponds roughly with you senteces.
 ### Dataset and pre-trained model
 The pre-trained model should be downloaded from [here](https://www.kaggle.com/watts2/glove6b50dtxt) and stored in the folder "data".
 ### NLP
