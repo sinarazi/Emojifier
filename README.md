@@ -1,7 +1,7 @@
 # Emojifier
 It is a nlp-based project so as to give you emoji that corresponds roughly with you senteces.
 ### Dataset and pre-trained model
-The pre-trained model should be downloaded from [here](https://www.kaggle.com/watts2/glove6b50dtxt) and stored in the folder "data".
+The pre-trained model should be downloaded from [here](https://www.kaggle.com/watts2/glove6b50dtxt) and be stored in the folder whose name will be "data".
 ### NLP
 #### Using word vectors to improve emoji lookups
 * In many emoji interfaces, you need to remember that ❤️ is the "heart" symbol rather than the "love" symbol. 
